@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.logo{
+    border: 2px solid rgb(185, 182, 182);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: rgb(31, 31, 31);
+    cursor: pointer;
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo h3{
+    font-size: 13px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+section nav ul{
+    list-style: none;
+    margin-left: 200px;
+}
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+}
+section nav ul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #e2845c;
+    transition: 0.2s linear;
+}
+section nav ul li a:hover::after{
+    width: 100%;
+}
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    top: 130px;
+}
+
+section .main .main-text h1{
+    font-size: 60px;
+    position: relative;
+    top: -70px;
+}
+section .main .main-text h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family:mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+section .main .main-img img{
+    width: 600px;
+    height: 500px;
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 123px;
+    bottom: 120px;
+    line-height: 22px;
+    padding-top: 30px;
+} 
+section .main-btn{
+    background: #fac031;
+    position: relative;
+    left: 123px;
+    bottom: 30px;
+    width: 150px;
+    cursor: pointer;
+    padding: 12px 25px;
+}
+section .main-btn a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration: none;
+}
+section .main-btn i{
+    color: #fff;
+    transition: 0.3s;
+}
+section .main-btn:hover i{
+    transform: translateX(7px);
+}
+
+.about{
+    width: 100%;
+    min-height: 600px;
+    padding: 70px 25px;
+}
+.about .about-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.about .about-main .about-image{
+    margin-left: 50px;
+    margin-right: 70px;
+    flex-basis: 25%;
+}
+.about .about-main .about-image img{
+    width: 400px;
+    position: relative;
+    top: 60px;
+}
+
+.about .about-main .about-text h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+.about .about-main .about-text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 50;
+}
+.about .about-main .about-text h1::after{
+    content: '';
+    display: block;
+    width: 240px;
+    height: 3px;
+    background: #e2845c;
+
+}
+.about .about-main .about-text h3{
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.about .about-main .about-text p{
+    width: 800px;
+    text-align: justify;
+    margin-right: 50px;
+    line-height: 22px;
+
+}
+.about-btn{
+    background: #fac031;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    top: 50px;
+}
+.menu{
+    width: 100%;
+    padding: 70px 0px;
+}
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.menu h1 span{
+    color: #fac031;
+    font-family: mv boli;
+    margin-left: 15px;
+}
+.menu h1 span::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e2845c;
+    position: relative;
+    bottom: 15px;
+}
+.menu .menu-box{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.menu .menu-box .menu-card{
+    width: 300px;
+    height: 420px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    grid-gap: 10px;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+.menu-card:hover{
+    transform: translateY(-10px);
+}
+.menu-img{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-card .small-card{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+.menu-card:hover .small-card{
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+.menu-card .small-card i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color:#000;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+.menu-card .small-card i:hover{
+    color: #fac031;
+}
+.menu-card .menu-info h2{
+    width: 60%;
+    text-align: center;
+    margin:10px auto;
+    font-size: 25px;
+    color: #fac031;
+}
+.menu-card .menu-info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+.menu-card .menu-info h3{
+    text-align: center;
+    margin-top: 10px;
+}
+.menu-card a{
+    position: relative;
+    left: 30%;
+    top: 25px;
+}
+.menu-details a{
+    position: relative;
+    top: 90%;
+    border-radius: 20px;
+}
+#OurChefs .menu-card{
+    height: 350px;
+}
+#OurChefs .menu-info{
+    text-align: center;
+}
+.review-icons{
+    margin-left: 100px;
+}
+#Review .menu-card i{
+    color: #fac031;
+}
+#Review .menu-img{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+#Review .menu-img img{
+    object-fit: cover;
+}
+
+.account-page{
+    padding: 50px 0;
+}
+.account-page h1{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    width: 500px;
+    padding: 50px 0;
+    margin-left: 150px;
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0.1);
+    overflow: hidden;
+    margin-right: 200px;
+}
+.form-container span{
+    font-weight:bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 100px;
+    transition: transform 1s;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form .btn:focus{
+    outline: none;
+}
+.btn{
+    display: inline-block;
+    background: #fac031;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 30px;
+    transition: background-color 0.5s;
+}
+.btn:hover{
+    background-color: #563434;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+#indicator{
+    width: 100px;
+    border: none;
+    background:#fac031;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px); 
+    transition: transform 1s;
+
+}
+
+/* Menu page */
+
+.menu .heading{
+    position: relative;
+    left: 180px;
+}
+
+
+@media (min-width: 701px) and (max-width: 900px) {
+    section nav ul{
+        margin-right: 200px;
+    }
+    section nav ul li{
+        margin: 0 10px;
+    }
+}
